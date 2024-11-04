@@ -34,7 +34,7 @@ A new Flutter plugin project.
   s.static_framework = true
   s.dependency 'LibTorch', '~> 2.1.0'
   # s.dependency 'LibTorch-Lite', '~> 1.13.0.1'
-  # s.dependency 'LibTorchvision', '~> 0.14.0'
+  s.dependency 'LibTorchvision', '~> 0.14.0'
   s.swift_version = '5.0'
 
 end
