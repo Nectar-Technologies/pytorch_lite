@@ -28,9 +28,10 @@ A new Flutter plugin project.
     'DEFINES_MODULE' => 'YES', 
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386',
     'HEADER_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/LibTorch/install/include"',
-    # 'HEADER_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/LibTorch-Lite/install/include"',
-
+    'LIBRARY_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/LibTorch/install/lib" "${PODS_ROOT}/LibTorchvision/install/lib"',
+    'OTHER_LDFLAGS' => '-all_load -force_load $(PODS_ROOT)/LibTorch/install/lib/libtorch.a -force_load $(PODS_ROOT)/LibTorchvision/install/lib/libtorchvision.a'
   }
+
   s.static_framework = true
   s.dependency 'LibTorch', '~> 2.1.0'
   # s.dependency 'LibTorch-Lite', '~> 1.13.0.1'
